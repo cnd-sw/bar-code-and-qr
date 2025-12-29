@@ -1,0 +1,61 @@
+# Configuration file for QR and Barcode Detection System
+
+# Paths
+paths:
+  qr_data: "qr_data"
+  barcode_data: "barcode_data"
+  processed_data: "data/processed"
+  models: "models"
+  outputs: "outputs"
+
+# QR Code Detection Settings
+qr_detection:
+  use_opencv: true
+  use_pyzbar: true
+  min_confidence: 0.5
+
+# Barcode Detection Settings
+barcode_detection:
+  use_yolo: false
+  use_annotations: true
+  use_pyzbar: true
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+
+# Preprocessing Settings
+preprocessing:
+  resize: false
+  max_width: 1920
+  max_height: 1080
+  enhance_contrast: true
+  denoise: false
+  grayscale: false
+
+# Decoding Settings
+decoding:
+  timeout: 5  # seconds
+  try_harder: true
+  multiple_codes: true
+
+# Visualization Settings
+visualization:
+  draw_boxes: true
+  draw_labels: true
+  box_color: [0, 255, 0]  # Green in BGR
+  box_thickness: 2
+  font_scale: 0.6
+  font_thickness: 2
+
+# Batch Processing Settings
+batch:
+  num_workers: 4
+  batch_size: 32
+  save_visualizations: true
+  save_results: true
+  output_format: "csv"  # csv or json
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  save_logs: true
+  log_file: "outputs/app.log"

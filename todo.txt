@@ -1,0 +1,2 @@
+this folder contains images and text files of QR and Barcodes.
+i want to make a project, where i detect and decode these images
