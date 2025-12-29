@@ -217,6 +217,3 @@ MIT License
 - pyzbar for robust QR/barcode decoding
 - Ultralytics for YOLO implementation
 
-## Contact
-
-For questions or issues, please open an issue on the repository.
